@@ -16,8 +16,6 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -42,9 +40,11 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://codepen.io/Laurie312/full/PoKrYLg](https://your-live-site-url.com)
 
 ## My process
+
+I blitzed through the main design as quickly as I could. Starting on the mobile version first. It's often fairly easy to scale upwards to desktop size. I actually almost prematurely submitted, before realising I had forgotten the hover/focus states. I clearly laid out my CSS which I learnt from seeing how John Smilga lays his CSS out.
 
 ### Built with
 
@@ -53,59 +53,59 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+In this project I want to thank Grace from the frontend slack community who guided me through, when I lost my balance a little bit. While I had intuited that the eye on hover should probably be added with the pseudo element ::after, Grace was the one that actually showed me that you COULD use pseudo elements and pseudo classes together. It turns out this doesn't break css!
 
-To see how you can add code snippets, see below:
+I also looked into how to better structure my css and how to use variables to save who font's. Ie not just the family, but weight size etc in one variable. This is really powerful especially in this kind of setting, where you're given a design spec to follow.
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+      <a href="/" class="hero-image-container">
+        <img class="hero-image" src="https://i.postimg.cc/NfR2yhNs/image-equilibrium.jpg" alt="Spinning glass cube"/>
+      </a>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+
+<!-- Example of variable held in :root -->
+
+    --var-para: normal normal 300 1em/1.55em 'Outfit', sans-serif;
+    
+<!-- The Anchor and the Eye -->
+
+.hero-image-container::after {
+    content: '';
+    background-image: url("https://i.postimg.cc/9MtT4GZY/view.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 5rem;
+    background-color: hsla(178, 100%, 50%, 0.3);
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.hero-image-container:hover::after {
+  opacity: 1;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+What I've found useful about using Frontend Mentor is that the design is made for you. This working method of 'copy what you see' is really intuitive and helps me get into a flow. In my future learning, this could go hand in hand with making wireframe designs. I'd like to be able to knock out super quick designs in a kind of blocky way. So that I can have this visual thing to look at.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Frontend Mentor - [@Lauro235](https://www.frontendmentor.io/profile/Lauro235)
+- Twitter - [@Lauro235](https://twitter.com/Lauro235)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Grace from the frontend mentor slack community. I salute you!
