@@ -12,7 +12,6 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -39,7 +38,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://github.com/Lauro235/2.nft-preview-card](https://your-solution-url.com)
 - Live Site URL: [https://codepen.io/Laurie312/full/PoKrYLg](https://your-live-site-url.com)
 
 ## My process
@@ -58,7 +57,7 @@ I blitzed through the main design as quickly as I could. Starting on the mobile 
 
 In this project I want to thank Grace from the frontend slack community who guided me through, when I lost my balance a little bit. While I had intuited that the eye on hover should probably be added with the pseudo element ::after, Grace was the one that actually showed me that you COULD use pseudo elements and pseudo classes together. It turns out this doesn't break css!
 
-I also looked into how to better structure my css and how to use variables to save who font's. Ie not just the family, but weight size etc in one variable. This is really powerful especially in this kind of setting, where you're given a design spec to follow.
+I also looked into how to better structure my css and how to use variables to save whole font values. Ie not just the family, but weight, size etc all in one variable. This is really powerful especially in this kind of setting, where you're given a design spec to follow by sight.
 
 ```html
       <a href="/" class="hero-image-container">
